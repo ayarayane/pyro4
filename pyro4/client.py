@@ -1,0 +1,11 @@
+import Pyro4
+ns = Pyro4.locateNS()
+uri = ns.lookup('uri')
+i = input ( "what is Pyro uri of the salut object").strip()
+name = input(" what is your name?")
+x = input("number one :")
+y = input(" number tow :")
+o=Pyro4.Proxy(uri)
+print(o.salut(name))
+print(o.add(x,y))
+print("thank you")
